@@ -1,0 +1,1756 @@
+PYTHON INTERVIEW KNOWLEDGE BASE
+================================
+
+PYTHON FUNDAMENTALS
+===================
+
+What is Python?
+
+Python is a high-level, interpreted, general-purpose programming language. It is widely used for web development, automation, data science, artificial intelligence, machine learning, scripting, testing, and software development.
+
+Python emphasizes readability and simplicity. Python programs generally require less code compared with many other programming languages.
+
+Python is dynamically typed, which means that the programmer does not have to explicitly declare the type of a variable.
+
+Example:
+
+name = "Numan"
+age = 24
+
+Python determines the types automatically.
+
+
+VARIABLES
+=========
+
+A variable is a name that refers to a value stored in memory.
+
+Example:
+
+name = "Ali"
+age = 25
+salary = 50000.50
+
+Python variables do not require explicit type declarations.
+
+Example:
+
+x = 10
+x = "Python"
+
+The variable x can refer to different types of values during program execution.
+
+
+PYTHON DATA TYPES
+=================
+
+Common built-in Python data types include:
+
+1. int
+2. float
+3. str
+4. bool
+5. list
+6. tuple
+7. set
+8. dict
+9. NoneType
+
+Integer:
+
+age = 25
+
+Float:
+
+price = 99.99
+
+String:
+
+name = "Python"
+
+Boolean:
+
+is_active = True
+
+None:
+
+result = None
+
+
+STRINGS
+=======
+
+A string is a sequence of characters.
+
+Example:
+
+name = "Python"
+
+Strings can be accessed using indexes.
+
+name = "Python"
+
+name[0]
+
+The result is:
+
+P
+
+Python strings are immutable. This means that an existing string cannot be changed directly.
+
+String concatenation:
+
+first_name = "Muhammad"
+last_name = "Numan"
+
+full_name = first_name + " " + last_name
+
+String formatting can be done using f-strings.
+
+name = "Numan"
+age = 24
+
+message = f"My name is {name} and I am {age} years old."
+
+
+LISTS
+=====
+
+A list is an ordered and mutable collection.
+
+Example:
+
+numbers = [1, 2, 3, 4, 5]
+
+Lists can contain different data types.
+
+items = [10, "Python", True, 5.5]
+
+Accessing an element:
+
+numbers[0]
+
+Adding an item:
+
+numbers.append(6)
+
+Removing an item:
+
+numbers.remove(3)
+
+Lists are mutable, meaning their contents can be changed after creation.
+
+
+TUPLES
+======
+
+A tuple is an ordered and immutable collection.
+
+Example:
+
+coordinates = (10, 20)
+
+Tuple values cannot normally be changed after creation.
+
+Tuples are useful when the data should remain unchanged.
+
+
+LIST VS TUPLE
+=============
+
+List:
+- Mutable
+- Uses square brackets
+- Suitable for data that may change
+
+Tuple:
+- Immutable
+- Uses parentheses
+- Suitable for fixed collections
+
+
+SETS
+====
+
+A set is an unordered collection of unique elements.
+
+Example:
+
+numbers = {1, 2, 3, 3, 4}
+
+The duplicate 3 is removed.
+
+Sets are useful for removing duplicates and performing mathematical set operations.
+
+
+DICTIONARIES
+============
+
+A dictionary stores data using key-value pairs.
+
+Example:
+
+student = {
+    "name": "Numan",
+    "age": 24,
+    "department": "Computer Science"
+}
+
+Accessing a value:
+
+student["name"]
+
+Adding a value:
+
+student["city"] = "Multan"
+
+Dictionaries are commonly used when structured information needs to be represented using keys and values.
+
+
+CONDITIONAL STATEMENTS
+======================
+
+Python uses if, elif, and else for decision making.
+
+Example:
+
+age = 20
+
+if age >= 18:
+    print("Adult")
+else:
+    print("Minor")
+
+Multiple conditions:
+
+marks = 80
+
+if marks >= 90:
+    print("A+")
+elif marks >= 80:
+    print("A")
+else:
+    print("Needs improvement")
+
+
+LOOPS
+=====
+
+Python provides for and while loops.
+
+FOR LOOP
+--------
+
+A for loop is commonly used to iterate over a sequence.
+
+Example:
+
+for number in [1, 2, 3]:
+    print(number)
+
+
+WHILE LOOP
+==========
+
+A while loop executes while a condition remains true.
+
+Example:
+
+count = 0
+
+while count < 5:
+    print(count)
+    count += 1
+
+
+BREAK
+=====
+
+The break statement stops a loop.
+
+Example:
+
+for number in range(10):
+    if number == 5:
+        break
+    print(number)
+
+
+CONTINUE
+========
+
+The continue statement skips the current iteration.
+
+Example:
+
+for number in range(5):
+    if number == 2:
+        continue
+    print(number)
+
+
+FUNCTIONS
+=========
+
+A function is a reusable block of code.
+
+Example:
+
+def add(a, b):
+    return a + b
+
+result = add(5, 3)
+
+Functions help reduce code duplication and improve organization.
+
+
+PARAMETERS AND ARGUMENTS
+=======================
+
+Parameters are variables defined in a function.
+
+Example:
+
+def greet(name):
+    print(name)
+
+The value passed to the function is an argument.
+
+greet("Numan")
+
+
+DEFAULT PARAMETERS
+==================
+
+A function can have default parameter values.
+
+Example:
+
+def greet(name="User"):
+    print(f"Hello {name}")
+
+If no argument is provided, the default value is used.
+
+
+*ARGS
+=====
+
+*args allows a function to receive multiple positional arguments.
+
+Example:
+
+def add_numbers(*args):
+    return sum(args)
+
+add_numbers(1, 2, 3, 4)
+
+
+**KWARGS
+========
+
+**kwargs allows a function to receive multiple keyword arguments.
+
+Example:
+
+def display_info(**kwargs):
+    print(kwargs)
+
+display_info(name="Numan", age=24)
+
+
+LAMBDA FUNCTIONS
+================
+
+A lambda function is a small anonymous function.
+
+Example:
+
+square = lambda x: x * x
+
+print(square(5))
+
+Lambda functions are commonly used with functions such as map, filter, and sorted.
+
+
+LIST COMPREHENSIONS
+===================
+
+List comprehension provides a concise way to create lists.
+
+Example:
+
+numbers = [1, 2, 3, 4, 5]
+
+squares = [x * x for x in numbers]
+
+The result is:
+
+[1, 4, 9, 16, 25]
+
+
+DICTIONARY COMPREHENSION
+========================
+
+Dictionary comprehensions can create dictionaries concisely.
+
+Example:
+
+numbers = [1, 2, 3]
+
+squares = {x: x * x for x in numbers}
+
+
+EXCEPTION HANDLING
+==================
+
+Exception handling allows a program to handle runtime errors.
+
+Python commonly uses:
+
+try
+except
+else
+finally
+
+Example:
+
+try:
+    number = int(input("Enter number: "))
+except ValueError:
+    print("Invalid number")
+
+
+FINALLY
+=======
+
+The finally block executes whether an exception occurs or not.
+
+Example:
+
+try:
+    file = open("data.txt")
+except Exception:
+    print("Error")
+finally:
+    print("Operation finished")
+
+
+RAISING EXCEPTIONS
+==================
+
+The raise statement can manually generate an exception.
+
+Example:
+
+age = -1
+
+if age < 0:
+    raise ValueError("Age cannot be negative")
+
+
+OBJECT-ORIENTED PROGRAMMING
+===========================
+
+Object-oriented programming is a programming approach based on objects and classes.
+
+Important OOP concepts include:
+
+1. Class
+2. Object
+3. Encapsulation
+4. Inheritance
+5. Polymorphism
+6. Abstraction
+
+
+CLASS
+=====
+
+A class is a blueprint for creating objects.
+
+Example:
+
+class Student:
+
+    def __init__(self, name):
+        self.name = name
+
+    def display(self):
+        print(self.name)
+
+
+OBJECT
+======
+
+An object is an instance of a class.
+
+Example:
+
+student = Student("Numan")
+
+student.display()
+
+
+CONSTRUCTOR
+===========
+
+The __init__ method is commonly used to initialize an object.
+
+Example:
+
+class Person:
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+
+SELF
+====
+
+self refers to the current object instance.
+
+Example:
+
+class Student:
+
+    def __init__(self, name):
+        self.name = name
+
+
+INHERITANCE
+===========
+
+Inheritance allows one class to inherit properties and methods from another class.
+
+Example:
+
+class Animal:
+
+    def speak(self):
+        print("Animal speaks")
+
+
+class Dog(Animal):
+
+    def bark(self):
+        print("Dog barks")
+
+
+POLYMORPHISM
+============
+
+Polymorphism allows different objects to provide different implementations of the same method.
+
+Example:
+
+class Dog:
+
+    def speak(self):
+        print("Woof")
+
+
+class Cat:
+
+    def speak(self):
+        print("Meow")
+
+
+Both classes have a speak method but behave differently.
+
+
+ENCAPSULATION
+=============
+
+Encapsulation means keeping data and behavior together inside a class and controlling access to internal data.
+
+Python commonly uses naming conventions such as:
+
+_name
+
+and:
+
+__name
+
+to indicate protected or private-style attributes.
+
+
+ABSTRACTION
+===========
+
+Abstraction means hiding unnecessary implementation details and exposing only the important functionality.
+
+Python supports abstraction using abstract base classes and the abc module.
+
+
+MODULES
+=======
+
+A module is a Python file containing code such as functions, classes, or variables.
+
+Example:
+
+math_utils.py
+
+Then it can be imported:
+
+import math_utils
+
+
+IMPORT STATEMENTS
+=================
+
+Python supports several import styles.
+
+Example:
+
+import math
+
+from math import sqrt
+
+import numpy as np
+
+
+PACKAGES
+========
+
+A package is a collection of Python modules organized in directories.
+
+Packages help organize larger applications.
+
+
+VIRTUAL ENVIRONMENTS
+====================
+
+A virtual environment creates an isolated Python environment for a project.
+
+Example:
+
+python -m venv venv
+
+Activate it on Windows:
+
+venv\Scripts\activate
+
+Virtual environments prevent dependency conflicts between projects.
+
+
+PIP
+===
+
+pip is a package management tool for Python.
+
+Installing a package:
+
+pip install requests
+
+Installing a specific version:
+
+pip install requests==2.31.0
+
+Creating a requirements file:
+
+pip freeze > requirements.txt
+
+Installing dependencies:
+
+pip install -r requirements.txt
+
+
+FILE HANDLING
+=============
+
+Python can read and write files.
+
+Example:
+
+with open("data.txt", "r") as file:
+    content = file.read()
+
+Writing:
+
+with open("data.txt", "w") as file:
+    file.write("Hello Python")
+
+
+WITH STATEMENT
+==============
+
+The with statement is commonly used for resource management.
+
+It automatically handles cleanup when the block finishes.
+
+It is commonly used with files, database connections, and other resources.
+
+
+ITERATORS
+=========
+
+An iterator is an object that can be iterated over one element at a time.
+
+An iterator generally implements:
+
+__iter__()
+
+and:
+
+__next__()
+
+
+GENERATORS
+==========
+
+Generators produce values lazily using the yield keyword.
+
+Example:
+
+def numbers():
+    yield 1
+    yield 2
+    yield 3
+
+Generators are useful for processing large amounts of data without storing everything in memory at once.
+
+
+MAP
+===
+
+map applies a function to each item of an iterable.
+
+Example:
+
+numbers = [1, 2, 3]
+
+squares = list(map(lambda x: x * x, numbers))
+
+
+FILTER
+======
+
+filter selects elements based on a condition.
+
+Example:
+
+numbers = [1, 2, 3, 4, 5]
+
+even = list(filter(lambda x: x % 2 == 0, numbers))
+
+
+SORTED
+======
+
+sorted returns a new sorted list.
+
+Example:
+
+numbers = [5, 2, 8, 1]
+
+result = sorted(numbers)
+
+
+SHALLOW COPY AND DEEP COPY
+==========================
+
+A shallow copy creates a new object but may still reference nested objects.
+
+A deep copy recursively copies nested objects.
+
+Python provides the copy module.
+
+Example:
+
+import copy
+
+new_object = copy.deepcopy(original)
+
+
+MUTABLE VS IMMUTABLE
+====================
+
+Mutable objects can be changed after creation.
+
+Examples:
+
+list
+dict
+set
+
+Immutable objects cannot normally be changed after creation.
+
+Examples:
+
+int
+float
+str
+tuple
+bool
+
+
+IS VS ==
+========
+
+== checks whether two values are equal.
+
+is checks whether two references point to the same object.
+
+Example:
+
+a = [1, 2]
+b = [1, 2]
+
+a == b
+
+This is True because their values are equal.
+
+a is b
+
+This is generally False because they are different objects.
+
+
+PYTHON MEMORY MANAGEMENT
+========================
+
+Python manages memory automatically.
+
+Python uses a private heap for objects and includes mechanisms such as reference counting and garbage collection.
+
+The garbage collector helps detect and clean up certain reference cycles.
+
+
+GARBAGE COLLECTION
+===================
+
+Garbage collection automatically removes objects that are no longer needed.
+
+Python uses reference counting as a major mechanism and also has a cyclic garbage collector.
+
+
+DECORATORS
+==========
+
+A decorator modifies or extends the behavior of a function or class.
+
+Example:
+
+def decorator(function):
+
+    def wrapper():
+        print("Before")
+        function()
+        print("After")
+
+    return wrapper
+
+
+@decorator
+def hello():
+    print("Hello")
+
+
+CONTEXT MANAGERS
+================
+
+Context managers manage resources and cleanup.
+
+The with statement is the most common way to use a context manager.
+
+Custom context managers can be created using __enter__ and __exit__.
+
+
+DATACLASSES
+===========
+
+The dataclasses module provides a convenient way to create classes primarily used for storing data.
+
+Example:
+
+from dataclasses import dataclass
+
+@dataclass
+class Student:
+    name: str
+    age: int
+
+
+TYPE HINTS
+==========
+
+Type hints document expected types.
+
+Example:
+
+def add(a: int, b: int) -> int:
+    return a + b
+
+Type hints improve readability and help development tools detect potential issues.
+
+
+OPTIONAL TYPES
+==============
+
+The typing module can describe values that may have multiple possible types.
+
+Modern Python can use:
+
+str | None
+
+For example:
+
+def get_name() -> str | None:
+    return None
+
+
+ASYNC PROGRAMMING
+=================
+
+Python supports asynchronous programming using async and await.
+
+Example:
+
+async def get_data():
+    result = await some_operation()
+    return result
+
+Async programming is useful for I/O-bound operations such as network requests.
+
+
+ASYNCIO
+=======
+
+asyncio is Python's standard library for asynchronous programming.
+
+It provides an event loop and tools for running asynchronous tasks.
+
+
+MULTITHREADING
+==============
+
+Threads allow multiple execution paths within a process.
+
+Python's threading module can be useful for I/O-bound work.
+
+Because of the Global Interpreter Lock in standard CPython implementations, threads do not generally provide parallel execution of Python bytecode for CPU-bound tasks.
+
+
+MULTIPROCESSING
+===============
+
+Multiprocessing creates separate processes.
+
+It can be useful for CPU-bound workloads because different processes can execute Python code independently.
+
+
+GIL
+===
+
+GIL stands for Global Interpreter Lock.
+
+In standard CPython implementations, the GIL allows only one thread at a time to execute Python bytecode within a process.
+
+The GIL is an important consideration when choosing between threading and multiprocessing for CPU-bound tasks.
+
+
+UNIT TESTING
+============
+
+Unit testing tests individual components of an application.
+
+Python provides the unittest module.
+
+Example:
+
+import unittest
+
+class TestMath(unittest.TestCase):
+
+    def test_add(self):
+        self.assertEqual(2 + 3, 5)
+
+
+PYTEST
+======
+
+pytest is a popular Python testing framework.
+
+Example:
+
+def test_add():
+    assert 2 + 3 == 5
+
+
+LOGGING
+=======
+
+The logging module provides a standard way to record application events.
+
+Example:
+
+import logging
+
+logging.basicConfig(level=logging.INFO)
+
+logging.info("Application started")
+
+
+DEBUGGING
+=========
+
+Debugging is the process of identifying and fixing problems in software.
+
+Python provides the pdb debugger.
+
+IDEs such as VS Code also provide graphical debugging tools.
+
+
+PEP 8
+=====
+
+PEP 8 is the main style guide for Python code.
+
+Important recommendations include:
+
+- Use readable names.
+- Use consistent indentation.
+- Keep code organized.
+- Add appropriate spacing.
+- Keep lines reasonably sized.
+- Follow naming conventions.
+
+
+PYTHON WEB DEVELOPMENT
+======================
+
+Python is widely used for web development.
+
+Popular Python web frameworks include:
+
+1. Django
+2. Flask
+3. FastAPI
+
+Django is a full-featured web framework.
+
+Flask is a lightweight web framework.
+
+FastAPI is designed for building modern APIs and supports type hints and asynchronous programming.
+
+
+DJANGO
+======
+
+Django is a high-level Python web framework.
+
+It follows the model-template-view architecture and provides many built-in features.
+
+Important Django concepts include:
+
+- Models
+- Views
+- URLs
+- Templates
+- Forms
+- Middleware
+- Authentication
+- ORM
+- Admin panel
+
+
+DJANGO ORM
+==========
+
+Django ORM allows developers to interact with databases using Python objects instead of writing SQL for every operation.
+
+Example:
+
+User.objects.all()
+
+
+DJANGO REST FRAMEWORK
+====================
+
+Django REST Framework is commonly used to build REST APIs with Django.
+
+Important concepts include:
+
+- Serializers
+- API views
+- ViewSets
+- Routers
+- Authentication
+- Permissions
+
+
+FASTAPI
+=======
+
+FastAPI is a modern Python web framework for building APIs.
+
+It uses Python type hints and commonly uses Pydantic for data validation.
+
+Example:
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def home():
+    return {"message": "Hello World"}
+
+
+PYDANTIC
+========
+
+Pydantic is used for data validation and parsing based on Python type annotations.
+
+Example:
+
+from pydantic import BaseModel
+
+class User(BaseModel):
+    name: str
+    age: int
+
+
+REST API
+========
+
+REST is an architectural style commonly used for web APIs.
+
+Common HTTP methods include:
+
+GET
+POST
+PUT
+PATCH
+DELETE
+
+GET is commonly used to retrieve data.
+
+POST is commonly used to create data.
+
+PUT is commonly used to replace a resource.
+
+PATCH is commonly used to partially update a resource.
+
+DELETE is commonly used to remove a resource.
+
+
+HTTP STATUS CODES
+=================
+
+Common status codes:
+
+200 OK
+201 Created
+400 Bad Request
+401 Unauthorized
+403 Forbidden
+404 Not Found
+500 Internal Server Error
+
+200 indicates a successful request.
+
+201 indicates that a resource was created.
+
+400 indicates an invalid request.
+
+401 usually indicates that authentication is required or failed.
+
+403 indicates that the server understood the request but refuses to authorize it.
+
+404 indicates that the requested resource was not found.
+
+500 indicates a server-side error.
+
+
+DATABASES WITH PYTHON
+=====================
+
+Python applications commonly work with databases such as:
+
+- SQLite
+- MySQL
+- PostgreSQL
+
+Python can interact with databases using database drivers and ORMs.
+
+
+SQLITE
+======
+
+SQLite is a lightweight relational database.
+
+It stores the database in a file and does not require a separate database server.
+
+SQLite is useful for small applications, development, testing, and local storage.
+
+
+MYSQL
+=====
+
+MySQL is a relational database management system.
+
+Python applications can connect to MySQL using appropriate database drivers or frameworks.
+
+
+POSTGRESQL
+==========
+
+PostgreSQL is a powerful open-source relational database system.
+
+It supports advanced SQL features and is commonly used in production applications.
+
+
+SQLALCHEMY
+==========
+
+SQLAlchemy is a Python SQL toolkit and ORM.
+
+It allows developers to work with relational databases using Python objects and SQL expressions.
+
+
+ENVIRONMENT VARIABLES
+=====================
+
+Environment variables are commonly used to store configuration values such as:
+
+- Database URLs
+- API keys
+- Secret keys
+- Application configuration
+
+Sensitive values should not normally be hard-coded directly into source code.
+
+
+API DEVELOPMENT
+===============
+
+A Python API usually receives a request, validates the input, performs business logic, interacts with a database or another service, and returns a response.
+
+Typical API flow:
+
+Client
+  ->
+API endpoint
+  ->
+Validation
+  ->
+Business logic
+  ->
+Database
+  ->
+Response
+
+
+AUTHENTICATION
+==============
+
+Authentication verifies who a user is.
+
+Common authentication approaches include:
+
+- Session authentication
+- Token authentication
+- JWT authentication
+- OAuth2
+
+
+AUTHORIZATION
+=============
+
+Authorization determines what an authenticated user is allowed to do.
+
+Authentication asks:
+
+"Who are you?"
+
+Authorization asks:
+
+"What are you allowed to access?"
+
+
+JWT
+===
+
+JWT stands for JSON Web Token.
+
+JWTs are commonly used for stateless authentication.
+
+A JWT typically contains:
+
+- Header
+- Payload
+- Signature
+
+
+PASSWORD SECURITY
+=================
+
+Passwords should never be stored as plain text.
+
+Applications should store secure password hashes using appropriate password hashing algorithms and libraries.
+
+A common approach is to use a password hashing algorithm designed for passwords rather than a fast general-purpose hash.
+
+
+PYTHON PERFORMANCE
+==================
+
+Python performance can often be improved by:
+
+- Choosing appropriate algorithms
+- Using efficient data structures
+- Avoiding unnecessary work
+- Caching expensive operations
+- Using generators for large streams
+- Using asynchronous programming for suitable I/O workloads
+- Using multiprocessing for suitable CPU-bound workloads
+- Profiling before optimizing
+
+
+TIME COMPLEXITY
+===============
+
+Time complexity describes how the running time of an algorithm changes as input size increases.
+
+Common complexities include:
+
+O(1)
+O(log n)
+O(n)
+O(n log n)
+O(n²)
+
+For example, accessing an element by index in a Python list is generally O(1).
+
+Searching an unsorted list is generally O(n).
+
+
+SPACE COMPLEXITY
+================
+
+Space complexity describes how much additional memory an algorithm requires as input size increases.
+
+
+COMMON DATA STRUCTURE COMPLEXITIES
+===================================
+
+List:
+
+Index access: O(1)
+
+Searching: O(n)
+
+Appending at the end: generally O(1) amortized
+
+Dictionary:
+
+Average lookup: O(1)
+
+Average insertion: O(1)
+
+Set:
+
+Average lookup: O(1)
+
+Average insertion: O(1)
+
+
+PYTHON INTERVIEW QUESTIONS
+==========================
+
+Question:
+What is Python?
+
+Expected concepts:
+Python is a high-level, interpreted, general-purpose programming language known for readability and a large ecosystem.
+
+
+Question:
+What is the difference between a list and a tuple?
+
+Expected concepts:
+Lists are mutable while tuples are immutable.
+
+
+Question:
+What is a dictionary?
+
+Expected concepts:
+A dictionary stores key-value pairs and provides fast average-case lookup by key.
+
+
+Question:
+What is the difference between == and is?
+
+Expected concepts:
+== compares values while is checks object identity.
+
+
+Question:
+What is a decorator?
+
+Expected concepts:
+A decorator modifies or extends the behavior of a function or class.
+
+
+Question:
+What is a generator?
+
+Expected concepts:
+A generator produces values lazily using yield.
+
+
+Question:
+What is the GIL?
+
+Expected concepts:
+The Global Interpreter Lock in standard CPython implementations limits execution of Python bytecode by multiple threads at the same time within one process.
+
+
+Question:
+What is exception handling?
+
+Expected concepts:
+Exception handling allows programs to respond to runtime errors using mechanisms such as try and except.
+
+
+Question:
+What is inheritance?
+
+Expected concepts:
+Inheritance allows a class to reuse or extend behavior from another class.
+
+
+Question:
+What is polymorphism?
+
+Expected concepts:
+Polymorphism allows different objects to provide different implementations of a common interface or method.
+
+
+Question:
+What is a virtual environment?
+
+Expected concepts:
+A virtual environment isolates project dependencies and Python packages from other projects.
+
+
+Question:
+What is FastAPI?
+
+Expected concepts:
+FastAPI is a modern Python web framework commonly used to build APIs with Python type hints and automatic validation/documentation support.
+
+
+Question:
+What is Django?
+
+Expected concepts:
+Django is a high-level Python web framework providing features such as ORM, routing, templates, authentication, and an admin interface.
+
+
+Question:
+What is REST API?
+
+Expected concepts:
+A REST API exposes resources through HTTP endpoints and commonly uses methods such as GET, POST, PUT, PATCH, and DELETE.
+
+
+Question:
+What is the difference between authentication and authorization?
+
+Expected concepts:
+Authentication verifies identity while authorization determines permissions.
+
+
+Question:
+What is SQLAlchemy?
+
+Expected concepts:
+SQLAlchemy is a Python SQL toolkit and ORM used to interact with relational databases.
+
+
+Question:
+How can Python applications be made more secure?
+
+Expected concepts:
+Use secure authentication, password hashing, input validation, authorization, secret management, dependency updates, safe database queries, and proper error handling.
+
+
+QUESTION EVALUATION GUIDELINES
+==============================
+
+When evaluating a candidate's Python answer, consider:
+
+1. Correctness
+2. Relevance
+3. Technical depth
+4. Clarity
+5. Examples
+6. Understanding of the underlying concept
+
+A strong answer should directly answer the question, use correct terminology, and provide an example when appropriate.
+
+A weak answer may be vague, incorrect, unrelated, or missing important concepts.
+
+For beginner questions, simple but correct explanations can receive a good score.
+
+For advanced questions, the candidate should demonstrate deeper understanding and practical knowledge.
+
+
+PYTHON INTERVIEW LEVELS
+=======================
+
+BEGINNER TOPICS
+===============
+
+- Variables
+- Data types
+- Strings
+- Lists
+- Tuples
+- Sets
+- Dictionaries
+- Conditions
+- Loops
+- Functions
+- Basic exceptions
+- Basic file handling
+- Modules
+- Packages
+
+
+INTERMEDIATE TOPICS
+===================
+
+- OOP
+- Decorators
+- Generators
+- Iterators
+- Context managers
+- List comprehensions
+- Lambda functions
+- Type hints
+- Virtual environments
+- Testing
+- Logging
+- APIs
+- Databases
+- Async programming
+
+
+ADVANCED TOPICS
+===============
+
+- Python memory management
+- GIL
+- Multiprocessing
+- Advanced concurrency
+- Performance optimization
+- Profiling
+- Metaclasses
+- Descriptors
+- Advanced decorators
+- Async architecture
+- Distributed systems
+- Production API design
+- Security
+- Database optimization
+
+
+PRACTICAL PYTHON DEVELOPMENT
+=============================
+
+A professional Python developer should understand more than syntax.
+
+They should be able to:
+
+- Structure projects
+- Create reusable modules
+- Write tests
+- Handle errors
+- Work with APIs
+- Work with databases
+- Use Git
+- Manage dependencies
+- Use virtual environments
+- Debug applications
+- Write clean code
+- Understand security basics
+- Design maintainable systems
+
+
+CLEAN CODE
+==========
+
+Clean Python code should be:
+
+- Readable
+- Maintainable
+- Modular
+- Testable
+- Consistent
+- Well documented where necessary
+
+Good naming is important.
+
+Bad:
+
+x = 10
+
+Better:
+
+maximum_retries = 10
+
+
+GIT FOR PYTHON DEVELOPERS
+=========================
+
+Git is a distributed version control system.
+
+Common commands include:
+
+git init
+
+git clone
+
+git status
+
+git add
+
+git commit
+
+git push
+
+git pull
+
+git branch
+
+git merge
+
+git checkout
+
+Git allows developers to track changes and collaborate with other developers.
+
+
+PYTHON PROJECT STRUCTURE
+========================
+
+A typical Python project may contain:
+
+project/
+    app/
+    tests/
+    requirements.txt
+    README.md
+    .gitignore
+    .env
+    main.py
+
+Larger applications can contain separate modules for:
+
+- Routes
+- Services
+- Models
+- Database
+- Configuration
+- Utilities
+- Tests
+
+
+INTERVIEW SCORING EXAMPLE
+=========================
+
+Score 9-10:
+
+The candidate demonstrates strong understanding, provides accurate explanations, uses appropriate terminology, and can give practical examples.
+
+Score 7-8:
+
+The candidate understands the concept well but may miss some advanced details.
+
+Score 5-6:
+
+The candidate has basic understanding but has important gaps.
+
+Score 3-4:
+
+The candidate demonstrates limited understanding and needs significant improvement.
+
+Score 0-2:
+
+The candidate does not understand the concept or provides an incorrect answer.
+
+
+FINAL KNOWLEDGE BASE PURPOSE
+============================
+
+This document can be used as a retrieval source for an AI interview assistant.
+
+The retrieval system should search this knowledge base based on the interview question, candidate answer, job role, or requested topic.
+
+For example, if the interviewer asks:
+
+"What is the difference between a list and tuple?"
+
+The retrieval system should retrieve the section describing lists, tuples, and their differences.
+
+If the candidate answers:
+
+"Both are the same but tuple uses parentheses."
+
+The system can retrieve the relevant knowledge and compare the candidate's answer with the expected concepts.
+
+The AI can then generate feedback such as:
+
+"The candidate correctly identified that tuples use parentheses, but incorrectly stated that lists and tuples are the same. The key difference is mutability: lists are mutable while tuples are immutable."
+
+
+RAG USAGE IN INTERVIEW ASSISTANT
+================================
+
+The knowledge base can support several parts of the interview assistant:
+
+1. Question generation
+
+The system retrieves relevant Python concepts before generating questions.
+
+2. Answer evaluation
+
+The system retrieves the correct technical information and compares it with the candidate's answer.
+
+3. Feedback
+
+The system uses retrieved information to explain what the candidate missed.
+
+4. Study recommendations
+
+The system can identify weak concepts and retrieve relevant learning material.
+
+5. Difficulty selection
+
+The system can retrieve beginner, intermediate, or advanced concepts depending on the candidate's performance.
+
+6. Follow-up questions
+
+The system can retrieve related concepts and generate deeper questions.
+
+Example:
+
+Candidate answers a question about Python dictionaries.
+
+The system retrieves:
+
+- Dictionary definition
+- Key-value pairs
+- Lookup complexity
+- Mutability
+- Common methods
+
+The LLM can then generate a follow-up question about dictionary performance or practical usage.
+
+
+END OF PYTHON KNOWLEDGE BASE
+============================

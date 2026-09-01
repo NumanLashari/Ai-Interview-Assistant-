@@ -1,0 +1,26 @@
+# Node / React Native
+node_modules/
+.expo/
+dist/
+build/
+*.exp
+
+# Python / FastAPI
+__pycache__/
+*.pyc
+venv/
+env/
+.env
+
+# Local Databases & Vector Stores
+chroma_db/
+*.sqlite3
+
+# IDE / System Files
+.vscode/
+.DS_Store
+Thumbs.dbinterview.db
+
+interview.db
+
+interview.db
